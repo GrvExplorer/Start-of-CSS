@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 3</title>
+    <style>
+        @keyframes rightmove {
+            0%{
+                transform: translateX(0px);
+            }
+            
+            100%{
+                transform: translateX(400px);
+            }
+            50%{transform: translate(200px);}
+
+        }
+        @keyframes leftmove {
+            0%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(-400px);
+            }
+            50%{transform: translate(-200px);}
+        }
+        @keyframes centermove {
+            0%{
+                transform: translate(0px);
+            }
+            50%{transform: translate(100px);}
+            
+            100%{transform: translate(00px);}
+        }
+        /* *{ 
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }   */
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .child{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        
+        }
+        #item1{
+            position: absolute;
+            animation: rightmove 5s linear infinite;
+            opacity: 0.5;
+            left: 0px;
+        }
+        #item2{
+            
+            position: absolute;
+            opacity: 0.8;
+            animation: centermove 5s linear  infinite;
+        } 
+        #item3{
+            position: absolute;
+            left: 30px;
+            animation: leftmove 5s linear  infinite;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="child">
+        <img src="building.svg" alt="" id="item1">
+        <img src="building.svg" alt="" id="item2">
+        <img src="building.svg" alt="" id="item3">
+    </div>
+</body>
+</html>
